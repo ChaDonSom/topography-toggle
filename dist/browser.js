@@ -1,8 +1,6 @@
 ;(function (global) {
   "use strict"
 
-  console.log("@chadonsom/topography-toggle v0.2.0")
-
   function bindTopographyToggle(root, options) {
     if (!root) return function () {}
 
@@ -675,4 +673,4 @@
   global.TopographyToggle = {
     bindTopographyToggle: bindTopographyToggle,
   }
-})(window)
+})(typeof globalThis !== "undefined" ? globalThis : window)

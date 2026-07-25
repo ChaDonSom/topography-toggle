@@ -14,7 +14,9 @@
     "access": "public"
   },
   "scripts": {
-    "check": "node --check src/index.js && node --check dist/browser.js"
+    "build": "node scripts/build-browser.mjs",
+    "check": "npm run build && node --check src/index.js && node --check dist/browser.js",
+    "prepublishOnly": "npm run check"
   },
   "exports": {
     ".": "./src/index.js",

@@ -10,6 +10,8 @@ npm run check
 npm publish --access public
 ```
 
+`npm run check` rebuilds `dist/browser.js` from `src/index.js`. Do not edit the dist file by hand.
+
 ## API
 
 ```js
