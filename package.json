@@ -1,6 +1,6 @@
 {
   "name": "@chadonsom/topography-toggle",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "description": "Shared topography toggle behavior for ChadonSom projects",
