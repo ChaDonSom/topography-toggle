@@ -392,7 +392,6 @@ export function bindTopographyToggle(root, options) {
       }
 
       state.rafSettleId = 0
-      root.classList.remove("is-topography-settling")
       setProgress(target)
       if (anchor) nudgeScrollToAnchor(anchor)
 
@@ -400,6 +399,8 @@ export function bindTopographyToggle(root, options) {
       syncHandleState()
       endAnchorLock()
       if (shouldVibrate) vibrateIfPossible()
+
+      setTimeout(() => root.classList.remove("is-topography-settling"), 50)
     }
 
     state.rafSettleId = window.requestAnimationFrame(tick)
@@ -418,8 +419,10 @@ export function bindTopographyToggle(root, options) {
 
   function queueMeasure() {
     if (state.rafMeasureId) return
+    if (root.classList.contains("is-topography-settling")) return
 
     state.rafMeasureId = window.requestAnimationFrame(function () {
+      measureSegments()
       state.rafMeasureId = 0
       measureSegments()
     })
