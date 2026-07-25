@@ -1,0 +1,28 @@
+{
+  "name": "@chadonsom/topography-toggle",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Shared topography toggle behavior for ChadonSom projects",
+  "license": "MIT",
+  "author": "Chad Onsom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChaDonSom/topography-toggle.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "check": "node --check src/index.js && node --check dist/browser.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./browser": "./dist/browser.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ]
+}
